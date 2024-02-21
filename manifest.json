@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Fullscreen Toggle Hotkey",
+  "name": "Fullscreen Toggle",
   "version": "1.0",
-  "description": "Toggle fullscreen mode using hotkeys.",
+  "description": "Toggle fullscreen mode using a keyboard shortcut.",
   "permissions": ["activeTab"],
   "commands": {
     "toggle_fullscreen": {
