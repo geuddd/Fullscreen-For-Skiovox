@@ -1,7 +1,26 @@
 {
   "manifest_version": 2,
-  "name": "Fullscreen Hotkey",
+  "name": "Fullscreen Toggle Hotkey",
   "version": "1.0",
-  "description": "Enter fullscreen mode using hotkeys.",
-  "permissions": ["activeTab"]
+  "description": "Toggle fullscreen mode using hotkeys.",
+  "permissions": ["activeTab"],
+  "commands": {
+    "toggle_fullscreen": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Toggle fullscreen mode"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
 }
